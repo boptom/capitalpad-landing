@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="description" content="Welcome to Capital Pad homepage." />
+    <title>Capital Pad</title>
+    <link rel="icon" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-slate-900 p-4 text-gray-50 sm:p-0"
+    >
+      <div class="py-6 text-center sm:py-12 sm:pt-24">
+        <h1 class="mb-5 text-5xl font-bold tracking-widest">CAPITAL PAD</h1>
+        <p class="mb-8 text-xl font-light tracking-wide text-gray-400">
+          Changing the search fund industry for good.
+        </p>
+        <p class="mb-3">Join the waitlist.</p>
+        <div
+          class="flex flex-col space-y-3 sm:flex-row sm:space-x-3 sm:space-y-0"
+        >
+          <form
+            action="https://app.convertkit.com/forms/5704045/subscriptions"
+            class="seva-form formkit-form"
+            method="post"
+            data-sv-form="5704045"
+            data-uid="852c8c5ab6"
+            data-format="inline"
+            data-version="5"
+            data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Now check your email to confirm your subscription.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://convertkit.com/features/forms?utm_campaign=poweredby&amp;utm_content=form&amp;utm_medium=referral&amp;utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}'
+            min-width="400 500 600 700 800"
+          >
+            <div data-style="clean">
+              <input
+                class="rounded-lg border-0 border-slate-700 bg-slate-950 p-4 text-center text-lg shadow-xl duration-500 ease-in-out hover:shadow-white/10 focus:shadow-white/50 sm:text-left"
+                name="email_address"
+                aria-label="Email Address"
+                placeholder="Email Address"
+                required=""
+                type="email"
+              />
+              <button
+                data-element="submit"
+                class="rounded-lg bg-slate-800 px-8 py-4 text-lg font-semibold text-slate-100 shadow-xl duration-500 ease-in-out hover:bg-slate-700 hover:shadow-white/50"
+              >
+                <div class="formkit-spinner">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+                <span class="">Notify Me</span>
+              </button>
+              <ul
+                class="text-red-500 mt-2"
+                data-element="errors"
+                data-group="alert"
+              ></ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+
+    <div
+      id="particles-js"
+      class="pointer-events-none absolute left-0 top-0 h-full w-full"
+    ></div>
+  </body>
+</html>
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 160, density: { enable: true, value_area: 800 } },
+      color: { value: "#ffffff" },
+      shape: {
+        type: "circle",
+        stroke: { width: 0, color: "#000000" },
+        polygon: { nb_sides: 5 },
+        image: { src: "img/github.svg", width: 100, height: 100 },
+      },
+      opacity: {
+        value: 1,
+        random: true,
+        anim: { enable: true, speed: 1, opacity_min: 0, sync: false },
+      },
+      size: {
+        value: 1,
+        random: true,
+        anim: { enable: false, speed: 4, size_min: 0.3, sync: false },
+      },
+      line_linked: {
+        enable: false,
+        distance: 150,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 1,
+      },
+      move: {
+        enable: true,
+        speed: 1,
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: { enable: false, rotateX: 600, rotateY: 600 },
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: { enable: true, mode: "bubble" },
+        onclick: { enable: true, mode: "repulse" },
+        resize: true,
+      },
+      modes: {
+        grab: { distance: 400, line_linked: { opacity: 1 } },
+        bubble: { distance: 250, size: 0, duration: 2, opacity: 0, speed: 3 },
+        repulse: { distance: 400, duration: 0.4 },
+        push: { particles_nb: 4 },
+        remove: { particles_nb: 2 },
+      },
+    },
+    retina_detect: true,
+  });
+  var count_particles, stats, update;
+  stats = new Stats();
+  stats.setMode(0);
+  stats.domElement.style.position = "absolute";
+  stats.domElement.style.left = "0px";
+  stats.domElement.style.top = "0px";
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector(".js-count-particles");
+  update = function () {
+    stats.begin();
+    stats.end();
+    if (
+      window.pJSDom[0].pJS.particles &&
+      window.pJSDom[0].pJS.particles.array
+    ) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
